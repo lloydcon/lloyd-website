@@ -1716,6 +1716,15 @@ footer {
   color: #ffffff;
   margin-bottom: 22px;
 }
+
+.price-head > p {
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 22px;
+}
+
 .price-head > h2 {
   font-family: Muli;
   font-weight: 800;
