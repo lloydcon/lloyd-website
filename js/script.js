@@ -29,32 +29,51 @@ $(window).on("load", function() {
         
               var name = $('#contact-form .name').val();
               var email = $('#contact-form .email').val();
-              // var phone = $('#contact-form .phone').val();
+               var phone = $('#contact-form .phone').val();
         
         if(name == '' || email == '')
         {
           $('#contact-form .response').html('<div class="failed">Please fill the required fields.</div>');
           return false;
         }
-              
-        $.ajax({
-            url:"sendemail.php",
-            method:"POST",
-            data: $(form).serialize(),
-            beforeSend:function(){
-                $('#contact-form .response').html('<div class="text-info"><img src="images/preloader.gif"> Loading...</div>');
-            },
-            success:function(data){
-                $('form').trigger("reset");
-                $('#contact-form .response').fadeIn().html(data);
-                setTimeout(function(){
-                    $('#contact-form .response').fadeOut("slow");
-                }, 5000);
-            },
-            error:function(){
-                $('#contact-form .response').fadeIn().html(data);
-            }
+        
+        axios.post('https://lloyd-mailer.herokuapp.com/contact-us', {
+          email: 'Fred',
+          name: 'Flintstone',
+          message:"test email"
+        })
+        .then(function (response) {
+          console.log(response);
+            $('form').trigger("reset");
+            $('#contact-form .response').fadeIn().html(`<div class="Success">Message sent</div>`);
+            setTimeout(function(){
+                $('#contact-form .response').fadeOut("slow");
+            }, 5000);
+
+        })
+        .catch(function (error) {
+          console.log(error);
+          $('#contact-form .response').fadeIn().html(`<div class="failed">${error.message}</div>`);
         });
+
+        // $.ajax({
+        //     url:"sendemail.php",
+        //     method:"POST",
+        //     data: $(form).serialize(),
+        //     beforeSend:function(){
+        //         $('#contact-form .response').html('<div class="text-info"><img src="images/preloader.gif"> Loading...</div>');
+        //     },
+        //     success:function(data){
+        //         $('form').trigger("reset");
+        //         $('#contact-form .response').fadeIn().html(data);
+        //         setTimeout(function(){
+        //             $('#contact-form .response').fadeOut("slow");
+        //         }, 5000);
+        //     },
+        //     error:function(){
+        //         $('#contact-form .response').fadeIn().html(data);
+        //     }
+        // });
     });
     }
 
