@@ -27,8 +27,8 @@ $(window).on("load", function() {
 
               loading = true
 
-              var o = new Object();
-              var form = '#contact-form';
+              // var o = new Object();
+              // var form = '#contact-form';
         
               var name = $('#contact-form .name').val();
               var email = $('#contact-form .email').val();
@@ -63,29 +63,44 @@ $(window).on("load", function() {
           console.log(error);
           $('#contact-form .response').fadeIn().html(`<div class="failed">${error.message}</div>`);
         });
-
-        // $.ajax({
-        //     url:"sendemail.php",
-        //     method:"POST",
-        //     data: $(form).serialize(),
-        //     beforeSend:function(){
-        //         $('#contact-form .response').html('<div class="text-info"><img src="images/preloader.gif"> Loading...</div>');
-        //     },
-        //     success:function(data){
-        //         $('form').trigger("reset");
-        //         $('#contact-form .response').fadeIn().html(data);
-        //         setTimeout(function(){
-        //             $('#contact-form .response').fadeOut("slow");
-        //         }, 5000);
-        //     },
-        //     error:function(){
-        //         $('#contact-form .response').fadeIn().html(data);
-        //     }
-        // });
     });
     }
 
     // NEWS LETTER
+    if($('#newsletter-form').length){
+      $('#news-submit').click(function(){
+
+            loading = true
+            var email = $('#newsletter-form .email').val();
+        
+        if(email == '')
+        {
+          $('#newsletter-form .response').html('<div class="failed">Please fill your email.</div>');
+          return false;
+        }
+
+        if(loading) {
+          $('#newsletter-form .response').html('<div class="text-info"><img src="images/preloader.gif"> Loading...</div>');
+        }
+      
+        axios.post('https://lloyd-mailer.herokuapp.com/newsletter-subscription', {
+          email
+        })
+        .then(function (response) {
+          console.log(response);
+          loading = false
+          $('form').trigger("reset");
+          $('#newsletter-form .response').fadeIn().html(`<div class= "success">Email sent</div>`);
+          setTimeout(function(){
+              $('#newsletter-form .response').fadeOut("slow");
+          }, 5000);
+        })
+        .catch(function (error) {
+          console.log(error);
+          $('#newsletter-form .response').fadeIn().html(`<div class="failed">${error.message}</div>`);
+        });
+    });
+    }
 
 });
 
