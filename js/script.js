@@ -20,35 +20,43 @@ $(window).on("load", function() {
     })
 
     // CONTACT FORM VALIDATION  
+    let loading = false
 
     if($('#contact-form').length){
       $('#submit').click(function(){
-        
+
+              loading = true
+
               var o = new Object();
               var form = '#contact-form';
         
               var name = $('#contact-form .name').val();
               var email = $('#contact-form .email').val();
-               var phone = $('#contact-form .phone').val();
+              var message = $('#contact-form .message').val();
         
-        if(name == '' || email == '')
+        if(name == '' || email == '' || message == '')
         {
           $('#contact-form .response').html('<div class="failed">Please fill the required fields.</div>');
           return false;
         }
-        
+
+        if(loading) {
+          $('#contact-form .response').html('<div class="text-info"><img src="images/preloader.gif"> Loading...</div>');
+        }
+      
         axios.post('https://lloyd-mailer.herokuapp.com/contact-us', {
-          email: 'Fred',
-          name: 'Flintstone',
-          message:"test email"
+          email,
+          name,
+          message
         })
         .then(function (response) {
           console.log(response);
-            $('form').trigger("reset");
-            $('#contact-form .response').fadeIn().html(`<div class="Success">Message sent</div>`);
-            setTimeout(function(){
-                $('#contact-form .response').fadeOut("slow");
-            }, 5000);
+          loading = false
+          $('form').trigger("reset");
+          $('#contact-form .response').fadeIn().html(`<div class= "success">Message sent</div>`);
+          setTimeout(function(){
+              $('#contact-form .response').fadeOut("slow");
+          }, 5000);
 
         })
         .catch(function (error) {
@@ -76,6 +84,8 @@ $(window).on("load", function() {
         // });
     });
     }
+
+    // NEWS LETTER
 
 });
 
