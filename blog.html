@@ -1,298 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Lloyd Constellations | Blog Posts</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Lloyd Constellations blog" />
-	<meta name="author" content="Chaoo Charles">
-	<meta name="keywords" content="blog, blog posts" />
-	<link rel="icon" href="images/logo/favicon.png">
-	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/color.css">
-	<link rel="stylesheet" type="text/css" href="css/responsive.css">
-	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lloyd Constellations | Blog Posts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Lloyd Constellations blog" />
+    <meta name="author" content="Chaoo Charles" />
+    <meta name="keywords" content="blog, blog posts" />
+    <link rel="icon" href="images/logo/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/color.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
 
+  <body>
+    <div class="preloader">
+      <div class="loader-content">
+        <div class="logo">
+          <img
+            src="images/logo/logo-white-png.png"
+            width="250px"
+            alt="Lloyd Constellations logo"
+          />
+        </div>
+        <h2>is loading...</h2>
+        <img src="images/loader.gif" alt="" />
+      </div>
+    </div>
+    <!--preloader end-->
 
-<body>
+    <div class="left-sidebar">
+      <a href="#" title="" class="menu-btn">
+        <svg
+          width="34"
+          height="34"
+          viewBox="0 0 34 34"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.711397 17.6361C-0.0696518 18.4171 -0.0696518 19.6834 0.711397 20.4645C1.49245 21.2455 2.75878 21.2455 3.53982 20.4645L20.5104 3.49393C21.2914 2.71288 21.2914 1.44655 20.5104 0.665498C19.7293 -0.115551 18.463 -0.11555 17.682 0.665498L0.711397 17.6361Z"
+            fill="white"
+          />
+          <path
+            d="M2.12558 31.7782C1.34453 30.9971 1.34453 29.7308 2.12558 28.9498L19.0961 11.9792C19.8772 11.1981 21.1435 11.1981 21.9246 11.9792C22.7056 12.7602 22.7056 14.0266 21.9246 14.8076L4.95401 31.7782C4.17296 32.5592 2.90663 32.5592 2.12558 31.7782Z"
+            fill="white"
+          />
+          <path
+            d="M13.4393 33.1924C12.6583 32.4113 12.6583 31.145 13.4393 30.364L30.4099 13.3934C31.1909 12.6124 32.4572 12.6124 33.2383 13.3934C34.0193 14.1745 34.0193 15.4408 33.2383 16.2218L16.2677 33.1924C15.4867 33.9734 14.2204 33.9734 13.4393 33.1924Z"
+            fill="white"
+          />
+        </svg>
+      </a>
+      <ul class="mbl-menu">
+        <li>
+          <a
+            href="https://www.facebook.com/Lloyd-Constellations-Consulting-Company-147507255720910/?ref=page_internal"
+            target="_blank"
+            title=""
+            >Facebook</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/lloydconstellations/?hl=en"
+            target="_blank"
+            title=""
+            >Instagram</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!--left-sidebar end-->
 
-	<div class="preloader">
-		<div class="loader-content">
-			<div class="logo">
-                <img src="images/logo/logo-white-png.png" width="250px" alt="Lloyd Constellations logo" />
-			</div>
-			<h2>is loading...</h2>
-			<img src="images/loader.gif" alt="">
-		</div>
-	</div><!--preloader end-->
-	
-	<div class="left-sidebar">
-		<a href="#" title="" class="menu-btn">
-			<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M0.711397 17.6361C-0.0696518 18.4171 -0.0696518 19.6834 0.711397 20.4645C1.49245 21.2455 2.75878 21.2455 3.53982 20.4645L20.5104 3.49393C21.2914 2.71288 21.2914 1.44655 20.5104 0.665498C19.7293 -0.115551 18.463 -0.11555 17.682 0.665498L0.711397 17.6361Z" fill="white"/>
-				<path d="M2.12558 31.7782C1.34453 30.9971 1.34453 29.7308 2.12558 28.9498L19.0961 11.9792C19.8772 11.1981 21.1435 11.1981 21.9246 11.9792C22.7056 12.7602 22.7056 14.0266 21.9246 14.8076L4.95401 31.7782C4.17296 32.5592 2.90663 32.5592 2.12558 31.7782Z" fill="white"/>
-				<path d="M13.4393 33.1924C12.6583 32.4113 12.6583 31.145 13.4393 30.364L30.4099 13.3934C31.1909 12.6124 32.4572 12.6124 33.2383 13.3934C34.0193 14.1745 34.0193 15.4408 33.2383 16.2218L16.2677 33.1924C15.4867 33.9734 14.2204 33.9734 13.4393 33.1924Z" fill="white"/>
-			</svg>
-		</a>
-		<ul class="mbl-menu">
-			<li><a href="https://www.facebook.com/Lloyd-Constellations-Consulting-Company-147507255720910/?ref=page_internal" target="_blank" title="">Facebook</a></li>
-			<li><a href="https://www.instagram.com/lloydconstellations/?hl=en" target = "_blank" title="">Instagram</a></li>
-		</ul>
-	</div><!--left-sidebar end-->
+    <div class="wrapper">
+      <header class="black-bg">
+        <div class="container">
+          <div class="header-content">
+            <div class="logo">
+              <a href="index.html" title="">
+                <img
+                  src="images/logo/logo-white-png.png"
+                  width="250px"
+                  alt="Lloyd Constellations logo"
+                />
+              </a>
+            </div>
+            <!--logo end-->
+            <nav>
+              <ul>
+                <li><a href="index.html" title="">Home</a></li>
+                <li><a href="about.html" title="">About</a></li>
+                <li><a href="services.html" title="">Services</a></li>
+                <li><a href="portfolio.html" title="">Portfolio</a></li>
+                <li><a href="blog.html" title="">Blogs</a></li>
+                <li><a href="contact.html" title="">Contact us</a></li>
+              </ul>
+            </nav>
+            <!--navigation end-->
+            <div class="right-side-hd">
+              <span>+254 701 063018</span>
+              <a href="contact.html" title="" class="btn-default"
+                >Get a quote</a
+              >
+            </div>
+            <a href="#" title="" class="menu-btn">
+              <svg
+                width="34"
+                height="34"
+                viewBox="0 0 34 34"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.711397 17.6361C-0.0696518 18.4171 -0.0696518 19.6834 0.711397 20.4645C1.49245 21.2455 2.75878 21.2455 3.53982 20.4645L20.5104 3.49393C21.2914 2.71288 21.2914 1.44655 20.5104 0.665498C19.7293 -0.115551 18.463 -0.11555 17.682 0.665498L0.711397 17.6361Z"
+                  fill="white"
+                />
+                <path
+                  d="M2.12558 31.7782C1.34453 30.9971 1.34453 29.7308 2.12558 28.9498L19.0961 11.9792C19.8772 11.1981 21.1435 11.1981 21.9246 11.9792C22.7056 12.7602 22.7056 14.0266 21.9246 14.8076L4.95401 31.7782C4.17296 32.5592 2.90663 32.5592 2.12558 31.7782Z"
+                  fill="white"
+                />
+                <path
+                  d="M13.4393 33.1924C12.6583 32.4113 12.6583 31.145 13.4393 30.364L30.4099 13.3934C31.1909 12.6124 32.4572 12.6124 33.2383 13.3934C34.0193 14.1745 34.0193 15.4408 33.2383 16.2218L16.2677 33.1924C15.4867 33.9734 14.2204 33.9734 13.4393 33.1924Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+            <div class="clearfix"></div>
+          </div>
+          <!--header-content end-->
+        </div>
+      </header>
+      <!--header end-->
 
-	<div class="wrapper">
+      <div class="responsive-mobile-menu" style="z-index: 999">
+        <div class="responsive-logo">
+          <img
+            src="images/logo/logo-white-png.png"
+            width="250px"
+            alt="Lloyd Constellations logo"
+          />
+        </div>
+        <ul>
+          <li><a href="index.html" title="">Home</a></li>
+          <li><a href="about.html" title="">About</a></li>
+          <li>
+            <a href="services.html" title="">Services</a>
+            <ul>
+              <li>
+                <a href="service-details.html" title="">Service Details</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="portfolio.html" title="">Portfolio</a>
+          </li>
+          <li><a href="blog.html" title="">Blogs</a></li>
+          <li><a href="contact.html" title="">Contact us</a></li>
+        </ul>
+      </div>
+      <!--responsive-mobile-menu end-->
 
-		<header class="black-bg">
-			<div class="container">
-				<div class="header-content">
-					<div class="logo">
-						<a href="index.html" title="">
-							<img src="images/logo/logo-white-png.png" width="250px" alt="Lloyd Constellations logo" />
-						</a>
-					</div><!--logo end-->
-					<nav>
-						<ul>
-							<li><a href="home.html" title="">Home</a></li>
-							<li><a href="about.html" title="">About</a></li>
-							<li><a href="services.html" title="">Services</a></li>
-							<li><a href="portfolio.html" title="">Portfolio</a></li>
-							<li><a href="blog.html" title="">Blogs</a></li>
-							<li><a href="contact.html" title="">Contact us</a></li>
-						  </ul>
-					</nav><!--navigation end-->
-					<div class="right-side-hd">
-						<span>+254 701 063018</span>
-						<a href="contact.html" title="" class="btn-default">Get a quote</a>
+      <section class="pager-sec text-right bg-0 pb-75">
+        <div class="container-fluid">
+          <ul>
+            <li><a href="index.html" title="">Home</a></li>
+            <li><span>blog</span></li>
+          </ul>
+        </div>
+      </section>
+      <!--pager-sec end-->
+
+      <section class="black-bg">
+        <div class="page-content">
+          <div class="fixed-bg bg7"></div>
+          <h2 class="page-number">01.</h2>
+          <div class="container">
+            <div
+              class="main-banner-text mw-100 title-hd wow fadeInUp mgb-100"
+              data-wow-delay="300ms"
+            >
+              <span>blog</span>
+              <h1>articles & news at Lloyd</h1>
+              <p>
+                You may be interested in our technologies. We want to share more
+                helpful infomation with you about our digital life and methods.
+              </p>
+            </div>
+            <!--title-hd end-->
+            <div class="blog-page">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                  <div class="blog_post main">
+                    <div class="blog-thumbnail">
+                      <img style="height: 300px;" src="images/collaborative-genius.jpeg" alt="" />
+                    </div>
+                    <!--blog-thumbnail end-->
+                    <div class="blog_info">
+                      <ul class="meta">
+                        <li>
+                          <span class="category">Corporate</span>
+                        </li>
+                        <li>
+                          <span>June 4, 2021</span>
+                        </li>
+                      </ul>
+                      <h2 class="post-title">
+                        <a
+                          target="_blank"
+                          href="https://lloydconstellationskenya.medium.com/collaborative-genius-6d686ce5316d"
+                          title=""
+                          >COLLABORATIVE GENIUS
+                        >
+                      </h2>
+                      <a
+                        target="_blank"
+                        href="https://lloydconstellationskenya.medium.com/collaborative-genius-6d686ce5316d"
+                        title=""
+                        ><img src="images/icon9.svg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                  <!--blog end-->
+                </div>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<div class="blog_post main">
+					  <div class="blog-thumbnail">
+						<img style="height: 300px;" src="images/shouldyouhire.jpeg" alt="" />
+					  </div>
+					  <!--blog-thumbnail end-->
+					  <div class="blog_info">
+						<ul class="meta">
+						  <li>
+							<span class="category">Corporate</span>
+						  </li>
+						  <li>
+							<span>Aug 1, 2019</span>
+						  </li>
+						</ul>
+						<h2 class="post-title">
+						  <a
+							target="_blank"
+							href="https://medium.com/@lloydconstellationskenya/should-you-hire-a-professional-to-build-a-website-b6ce2d9041de"
+							title=""
+							>SHOULD YOU HIRE A PROFESSIONAL TO BUILD A WEBSITE?</a
+						  >
+						</h2>
+						<a
+						  target="_blank"
+						  href="https://medium.com/@lloydconstellationskenya/should-you-hire-a-professional-to-build-a-website-b6ce2d9041de"
+						  title=""
+						  ><img src="images/icon9.svg" alt=""
+						/></a>
+					  </div>
 					</div>
-					<a href="#" title="" class="menu-btn">
-						<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M0.711397 17.6361C-0.0696518 18.4171 -0.0696518 19.6834 0.711397 20.4645C1.49245 21.2455 2.75878 21.2455 3.53982 20.4645L20.5104 3.49393C21.2914 2.71288 21.2914 1.44655 20.5104 0.665498C19.7293 -0.115551 18.463 -0.11555 17.682 0.665498L0.711397 17.6361Z" fill="white"/>
-							<path d="M2.12558 31.7782C1.34453 30.9971 1.34453 29.7308 2.12558 28.9498L19.0961 11.9792C19.8772 11.1981 21.1435 11.1981 21.9246 11.9792C22.7056 12.7602 22.7056 14.0266 21.9246 14.8076L4.95401 31.7782C4.17296 32.5592 2.90663 32.5592 2.12558 31.7782Z" fill="white"/>
-							<path d="M13.4393 33.1924C12.6583 32.4113 12.6583 31.145 13.4393 30.364L30.4099 13.3934C31.1909 12.6124 32.4572 12.6124 33.2383 13.3934C34.0193 14.1745 34.0193 15.4408 33.2383 16.2218L16.2677 33.1924C15.4867 33.9734 14.2204 33.9734 13.4393 33.1924Z" fill="white"/>
-						</svg>
-					</a>
-					<div class="clearfix"></div>
-				</div><!--header-content end-->
-			</div>	
-		</header><!--header end-->
-
-		<div class="responsive-mobile-menu" style="z-index: 999;">
-			<div class="responsive-logo">
-                <img src="images/logo/logo-white-png.png" width="250px" alt="Lloyd Constellations logo" />
-			</div>
-			<ul>
-			  <li><a href="index.html" title="">Home</a></li>
-			  <li><a href="about.html" title="">About</a></li>
-			  <li>
-				<a href="services.html" title="">Services</a>
-				<ul>
-				  <li>
-					<a href="service-details.html" title="">Service Details</a>
-				  </li>
-				</ul>
-			  </li>
-			  <li>
-				<a href="portfolio.html" title="">Portfolio</a>
-			  </li>
-			  <li><a href="blog.html" title="">Blogs</a></li>
-			  <li><a href="contact.html" title="">Contact us</a></li>
-			</ul>
-		  </div>
-		  <!--responsive-mobile-menu end-->
-	
-
-		<section class="pager-sec text-right bg-0 pb-75">
-			<div class="container-fluid">
-				<ul>
-					<li><a href="index.html" title="">Home</a></li>
-					<li><span>blog</span></li>
-				</ul>
-			</div>
-		</section><!--pager-sec end-->
-
-		<section class="black-bg">
-			<div class="page-content">
-				<div class="fixed-bg bg7"></div>
-				<h2 class="page-number">01.</h2>
-				<div class="container">
-					<div class="main-banner-text mw-100 title-hd wow fadeInUp mgb-100" data-wow-delay="300ms">
-						<span>blog</span>
-						<h1>articles & news at Lloyd</h1>
-						<p>You may be interested in our technologies. We want to share more helpful infomation with you about our digital life and methods.</p>
-					</div><!--title-hd end-->
-					<div class="blog-page">
-						<div class="row">
-							<div class="col-lg-6 col-md-6 col-sm-6">
-								<div class="blog_post main">
-									<div class="blog-thumbnail">
-										<img src="images/shouldyouhire.jpeg" alt="">
-									</div><!--blog-thumbnail end-->
-									<div class="blog_info">
-										<ul class="meta">
-											<li>
-												<span class="category">Corporate</span>
-											</li>
-											<li>
-												<span>Aug 1, 2019</span>
-											</li>
-										</ul>
-										<h2 class="post-title"><a target="_blank" href="https://medium.com/@lloydconstellationskenya/should-you-hire-a-professional-to-build-a-website-b6ce2d9041de" title="">SHOULD YOU HIRE A PROFESSIONAL TO BUILD A WEBSITE?</a></h2>
-										<a target="_blank" href="https://medium.com/@lloydconstellationskenya/should-you-hire-a-professional-to-build-a-website-b6ce2d9041de" title=""><img src="images/icon9.svg" alt=""></a>
-									</div>
-								</div><!--blog end-->
-							</div>
-							<div class="col-lg-6 col-md-6 col-sm-6">
-								<div class="blog_post main">
-									<div class="blog-thumbnail">
-										<img src="images/digitize.jpeg" alt="">
-									</div><!--blog-thumbnail end-->
-									<div class="blog_info">
-										<ul class="meta">
-											<li>
-												<span class="category">Web</span>
-											</li>
-											<li>
-												<span>May 10, 2019</span>
-											</li>
-										</ul>
-										<h2 class="post-title"><a href="https://medium.com/@lloydconstellationskenya/digitalization-of-your-business-powered-by-lloyd-constellations-c340a2dc3c71" title="">DIGITALIZATION OF YOUR BUSINES</a></h2>
-										<a href="https://medium.com/@lloydconstellationskenya/digitalization-of-your-business-powered-by-lloyd-constellations-c340a2dc3c71" title=""><img src="images/icon9.svg" alt=""></a>
-									</div>
-								</div><!--blog end-->
-							</div>
-						</div>
-						<!-- <div class="full-div w-100 text-center mt-40">
+					<!--blog end-->
+				  </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                  <div class="blog_post main">
+                    <div class="blog-thumbnail">
+                      <img style="height: 300px;" src="images/digitize.jpeg" alt="" />
+                    </div>
+                    <!--blog-thumbnail end-->
+                    <div class="blog_info">
+                      <ul class="meta">
+                        <li>
+                          <span class="category">Web</span>
+                        </li>
+                        <li>
+                          <span>May 10, 2019</span>
+                        </li>
+                      </ul>
+                      <h2 class="post-title">
+                        <a
+                          href="https://medium.com/@lloydconstellationskenya/digitalization-of-your-business-powered-by-lloyd-constellations-c340a2dc3c71"
+                          title=""
+                          >DIGITALIZATION OF YOUR BUSINES</a
+                        >
+                      </h2>
+                      <a
+                        href="https://medium.com/@lloydconstellationskenya/digitalization-of-your-business-powered-by-lloyd-constellations-c340a2dc3c71"
+                        title=""
+                        ><img src="images/icon9.svg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                  <!--blog end-->
+                </div>
+              </div>
+              <!-- <div class="full-div w-100 text-center mt-40">
 							<a href="#" title="" class="btn-default">Load More</a>
 						</div> -->
-					</div><!--blog-page end-->
-				</div>
-			</div><!--about-in-details end-->
-		</section><!--about_us_section end-->
+            </div>
+            <!--blog-page end-->
+          </div>
+        </div>
+        <!--about-in-details end-->
+      </section>
+      <!--about_us_section end-->
 
-		<footer>
-			<div class="container">
-			  <div class="top-footer">
-				<div class="row">
-				  <div class="col-lg-6">
-					<div class="tp-contact wow fadeInUp" data-wow-delay="300ms">
-					  <div class="main-banner-text title-hd">
-						<span>newsletter</span>
-						<h1>
-						  be always <br />
-						  in touch <span></span>
-						</h1>
-						<p class="bdy">
-						  We are grateful to know you are interested in our content
-						  and services. Subscribe
-						</p>
-					  </div>
-					  <!--title-hd end-->
-					  <form class="newsletter-form" id="newsletter-form">
-						<div class="response"></div>
-						<input type="email" name="email" class="email" placeholder="Email" />
-						<button type="button"  id="news-submit">
-						  <img src="images/send.svg" alt="" />
-						</button>
-					  </form>
-					  <!-- <div class="clearfix"></div> -->
-					</div>
-					<!--tp-contact end-->
-				  </div>
-				  <div class="col-lg-6">
-					<div
-					  class="testimonial-sec wow fadeInDown"
-					  data-wow-delay="300ms"
-					>
-					  <div class="testi-head">
-						<div class="testi-thumb">
-						  <!-- <img src="https://via.placeholder.com/70x70" alt="" /> -->
-						</div>
-						<div class="testi-info">
-						  <h3>Peter Mwangi</h3>
-						  <span>CEO at Lloyd Constellations</span>
-						</div>
-					  </div>
-					  <p>
-						We never give up. Сhallenges make us stronger and more
-						professional. Keep in mind. Beware ;)
-					  </p>
-					  <!-- <img src="images/sing.png" alt="" /> -->
-					</div>
-					<!--testimonial-sec end-->
-					<div class="clearfix"></div>
-				  </div>
-				</div>
-			  </div>
-			  <!--top-footer end-->
-			  <div class="bottom-footer">
-				<div class="row">
-				  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-					<div
-					  class="widget widget-about wow fadeInUp"
-					  data-wow-delay="300ms"
-					>
-					<img src="images/logo/logo-white-png.png" width="250px" alt="Lloyd Constellations logo" />
-					<p>Copyright © 2020 Lloyd Constellations.</p>
-					</div>
-					<!--widget-about end-->
-				  </div>
-				  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-					<div
-					  class="widget widget-para wow fadeInDown"
-					  data-wow-delay="600ms"
-					>
-					  <h3 class="widget-title">Working hours:</h3>
-					  <p>Mon - Fri: 9 am - 4 pm Sat, Sun: Holiday</p>
-					</div>
-					<!--widget-para end-->
-				  </div>
-				  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-					<div
-					  class="widget widget-para wow fadeInUp"
-					  data-wow-delay="900ms"
-					>
-					  <h3 class="widget-title">Address:</h3>
-					  <p>
-						Chandaria Business Innovation and Incubation Center
-						–Kenyatta University
-					  </p>
-					  <p>P.O. Box 1242-00100, Nairobi, Kenya.</p>
-					</div>
-					<!--widget-para end-->
-				  </div>
-				  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-					<div
-					  class="widget widget-para wow fadeInDown"
-					  data-wow-delay="1200ms"
-					>
-					  <h3 class="widget-title">Hit us up:</h3>
-					  <span>+254 701063018</span>
-					  <p>info@lloydconstellations.co.ke</p>
-					</div>
-					<!--widget-para end-->
-				  </div>
-				</div>
-			  </div>
-			  <!--bottom-footer end-->
-			</div>
-		  </footer><!--footer end-->
+      <footer>
+        <div class="container">
+          <div class="top-footer">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="tp-contact wow fadeInUp" data-wow-delay="300ms">
+                  <div class="main-banner-text title-hd">
+                    <span>newsletter</span>
+                    <h1>
+                      be always <br />
+                      in touch <span></span>
+                    </h1>
+                    <p class="bdy">
+                      We are grateful to know you are interested in our content
+                      and services. Subscribe
+                    </p>
+                  </div>
+                  <!--title-hd end-->
+                  <form class="newsletter-form" id="newsletter-form">
+                    <div class="response"></div>
+                    <input
+                      type="email"
+                      name="email"
+                      class="email"
+                      placeholder="Email"
+                    />
+                    <button type="button" id="news-submit">
+                      <img src="images/send.svg" alt="" />
+                    </button>
+                  </form>
+                  <!-- <div class="clearfix"></div> -->
+                </div>
+                <!--tp-contact end-->
+              </div>
+              <div class="col-lg-6">
+                <div
+                  class="testimonial-sec wow fadeInDown"
+                  data-wow-delay="300ms"
+                >
+                  <div class="testi-head">
+                    <div class="testi-thumb">
+                      <!-- <img src="https://via.placeholder.com/70x70" alt="" /> -->
+                    </div>
+                    <div class="testi-info">
+                      <h3>Peter Mwangi</h3>
+                      <span>CEO at Lloyd Constellations</span>
+                    </div>
+                  </div>
+                  <p>
+                    We never give up. Сhallenges make us stronger and more
+                    professional. Keep in mind. Beware ;)
+                  </p>
+                  <!-- <img src="images/sing.png" alt="" /> -->
+                </div>
+                <!--testimonial-sec end-->
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+          <!--top-footer end-->
+          <div class="bottom-footer">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <div
+                  class="widget widget-about wow fadeInUp"
+                  data-wow-delay="300ms"
+                >
+                  <img
+                    src="images/logo/logo-white-png.png"
+                    width="250px"
+                    alt="Lloyd Constellations logo"
+                  />
+                  <p>Copyright © 2020 Lloyd Constellations.</p>
+                </div>
+                <!--widget-about end-->
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <div
+                  class="widget widget-para wow fadeInDown"
+                  data-wow-delay="600ms"
+                >
+                  <h3 class="widget-title">Working hours:</h3>
+                  <p>Mon - Fri: 9 am - 4 pm Sat, Sun: Holiday</p>
+                </div>
+                <!--widget-para end-->
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <div
+                  class="widget widget-para wow fadeInUp"
+                  data-wow-delay="900ms"
+                >
+                  <h3 class="widget-title">Address:</h3>
+                  <p>
+                    Chandaria Business Innovation and Incubation Center
+                    –Kenyatta University
+                  </p>
+                  <p>P.O. Box 1242-00100, Nairobi, Kenya.</p>
+                </div>
+                <!--widget-para end-->
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <div
+                  class="widget widget-para wow fadeInDown"
+                  data-wow-delay="1200ms"
+                >
+                  <h3 class="widget-title">Hit us up:</h3>
+                  <span>+254 701063018</span>
+                  <p>info@lloydconstellations.co.ke</p>
+                </div>
+                <!--widget-para end-->
+              </div>
+            </div>
+          </div>
+          <!--bottom-footer end-->
+        </div>
+      </footer>
+      <!--footer end-->
+    </div>
+    <!--wrapper end-->
+    <div class="clearfix"></div>
 
-
-	</div><!--wrapper end-->
-	<div class="clearfix"></div>
-
-
-<script src="js/jquery.min.js"></script>
-<script src="js/popper.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/placeholdem.min.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/script.js"></script>
-
-
-</body>
-
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/placeholdem.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
